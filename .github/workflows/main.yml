@@ -1,0 +1,73 @@
+name: GLaDOS Auto Checkin
+
+on:
+  schedule:
+    # 北京时间每天上午 10:00 自动运行 (UTC 时间 2:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 允许手动点按钮测试
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Checkin
+        env:
+          # 这里会读取你在 Settings 里填写的 COOKIE
+          GLADOS_COOKIE: ${{ secrets.COOKIE }}
+        run: |
+          python -c "
+          import requests
+          import os
+          import json
+
+          # 1. 获取 Cookie
+          cookie = os.environ.get('GLADOS_COOKIE')
+          if not cookie:
+              print('❌ 错误: 未找到 Cookie，请检查 Settings > Secrets')
+              exit(1)
+
+          # 2. 设置请求头，伪装成浏览器
+          url = 'https://glados.rocks/api/user/checkin'
+          headers = {
+              'cookie': cookie,
+              'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+              'content-type': 'application/json;charset=UTF-8',
+              'origin': 'https://glados.rocks',
+              'referer': 'https://glados.rocks/console/checkin'
+          }
+          payload = {'token': 'glados.network'}
+
+          print('⏳ 开始尝试签到...')
+          try:
+              # 发送请求
+              response = requests.post(url, headers=headers, json=payload)
+              print(f'📡 状态码: {response.status_code}')
+              
+              # 解析结果
+              res_json = response.json()
+              msg = res_json.get('message')
+              code = res_json.get('code')
+              
+              # 3. 判断结果
+              if code == 0:
+                  print(f'✅ 签到成功! 获得点数。消息: {msg}')
+              elif code == 1:
+                  print(f'🟡 今天已经签到过了。消息: {msg}')
+              elif code == -2:
+                   print(f'❌ Cookie 已过期，请去 GitHub Secrets 更新！消息: {msg}')
+                   exit(1) # 标记为失败，GitHub 会发邮件通知你
+              else:
+                  print(f'❌ 未知状态: {code}, 消息: {msg}')
+                  
+          except Exception as e:
+              print(f'❌ 脚本运行出错: {e}')
+              exit(1)
+          "
