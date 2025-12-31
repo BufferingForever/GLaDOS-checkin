@@ -42,8 +42,8 @@ glados-auto-checkin/
      
 3. 启用 Actions<br>
  由于 GitHub 的安全策略，Fork 的项目默认可能禁用了 Actions。<br>
- 1.点击仓库上方的 Actions 标签。<br>
- 2.如果看到绿色按钮 I understand my workflows, go ahead and enable them，请点击它。
+   1.点击仓库上方的 Actions 标签。<br>
+   2.如果看到绿色按钮 I understand my workflows, go ahead and enable them，请点击它。
 
 4. 测试运行<br>
  1.在 Actions 页面左侧点击 GLaDOS Checkin。<br>
