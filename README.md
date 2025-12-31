@@ -17,10 +17,12 @@ glados-auto-checkin/
 └── README.md               # 📖 说明文档：即你现在看到的这份说明
 ```
 
+
 ✨ 特性
 - 🕒 每日自动签到：每天北京时间 10:00 自动执行。
 - 📱 Telegram 通知：签到结果直接推送到手机（可选）。
 - 🛡️ 安全隐私：所有敏感数据（Cookie、Token）存储在 GitHub Secrets 中，不会公开。
+
 
 🚀 使用方法
 1. Fork 本仓库
@@ -51,6 +53,7 @@ glados-auto-checkin/
 
 等待几秒后，检查运行日志或查看手机是否收到通知。
 
+
 📅 定时说明
 默认配置为每天 UTC 02:00 (即北京时间 10:00) 运行。
 
@@ -58,10 +61,12 @@ glados-auto-checkin/
 ```text
 - cron: '0 2 * * *'  # 分 时 日 月 周 (UTC时间)
 ```
+
 ⚠️ 常见问题
 Cookie 过期：如果收到“Cookie Error”通知，请重新提取 Cookie 并更新到 Secrets 中。
 
 签到失败：请检查 Secrets 名字是否拼写正确（必须完全一致）。
+
 
 📜 免责声明
 本项目仅供学习交流使用，请勿用于商业用途。脚本运行完全基于 GitHub Actions 免费服务，不保证 100% 的可用性。
