@@ -23,8 +23,7 @@ glados-auto-checkin/
 - 📱 Telegram 通知：签到结果直接推送到手机（可选）。
 - 🛡️ 安全隐私：所有敏感数据（Cookie、Token）存储在 GitHub Secrets 中，不会公开。
 
-
-
+<br>
 
 🚀 使用方法
 1. Fork 本仓库
