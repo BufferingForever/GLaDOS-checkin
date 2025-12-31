@@ -61,8 +61,8 @@ glados-auto-checkin/
 ```text
 - cron: '0 2 * * *'  # 分 时 日 月 周 (UTC时间)
 ```
-
-
+<br>
+<br>
 
 ⚠️ 常见问题
 - Cookie 过期：如果收到“Cookie Error”通知，请重新提取 Cookie 并更新到 Secrets 中。
