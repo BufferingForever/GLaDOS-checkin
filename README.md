@@ -45,7 +45,7 @@ glados-auto-checkin/
  1.点击仓库上方的 Actions 标签。
  2.如果看到绿色按钮 I understand my workflows, go ahead and enable them，请点击它。
 
-4. 测试运行
+4. 测试运行<br>
  1.在 Actions 页面左侧点击 GLaDOS Checkin。
  2.点击右侧的 Run workflow 按钮 -> 再次点击绿色的 Run workflow。
  3.等待几秒后，检查运行日志或查看手机是否收到通知。
