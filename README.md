@@ -51,8 +51,7 @@ glados-auto-checkin/
  2.点击右侧的 Run workflow 按钮 -> 再次点击绿色的 Run workflow。
  3.等待几秒后，检查运行日志或查看手机是否收到通知。
 
-
-
+<br>
 
 📅 定时说明
 默认配置为每天 UTC 02:00 (即北京时间 10:00) 运行。
@@ -62,14 +61,12 @@ glados-auto-checkin/
 - cron: '0 2 * * *'  # 分 时 日 月 周 (UTC时间)
 ```
 <br>
-<br>
 
 ⚠️ 常见问题
 - Cookie 过期：如果收到“Cookie Error”通知，请重新提取 Cookie 并更新到 Secrets 中。
 - 签到失败：请检查 Secrets 名字是否拼写正确（必须完全一致）。
 
-
-
+<br>
 
 📜 免责声明
 本项目仅供学习交流使用，请勿用于商业用途。脚本运行完全基于 GitHub Actions 免费服务，不保证 100% 的可用性。
