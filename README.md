@@ -63,7 +63,7 @@ glados-auto-checkin/
 
 ## ⚠️ 常见问题
 - Cookie 过期：如果收到“Cookie Error”通知，请重新提取 Cookie 并更新到 Secrets 中。
-- 签到失败：请检查 Secrets 名字是否拼写正确（必须完全一致）。>
+- 签到失败：请检查 Secrets 名字是否拼写正确（必须完全一致）。
 
 <br>
 
