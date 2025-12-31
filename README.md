@@ -41,7 +41,7 @@ glados-auto-checkin/
      提示：TG_TOKEN 和 TG_ID 如果不填，脚本会自动跳过通知步骤，只进行签到。
      
 3. 启用 Actions
-由于 GitHub 的安全策略，Fork 的项目默认可能禁用了 Actions。
+ 由于 GitHub 的安全策略，Fork 的项目默认可能禁用了 Actions。
  1.点击仓库上方的 Actions 标签。
  2.如果看到绿色按钮 I understand my workflows, go ahead and enable them，请点击它。
 
