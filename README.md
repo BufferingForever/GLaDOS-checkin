@@ -16,9 +16,7 @@ glados-auto-checkin/
 ├── requirements.txt        # 📦 依赖列表：告诉环境需要安装 requests 库
 └── README.md               # 📖 说明文档：即你现在看到的这份说明
 ```
-<br> ---
-
-<br>
+<br> 
 
 ## ✨ 特性
 - 🕒 每日自动签到：每天北京时间 10:00 自动执行。
@@ -27,7 +25,7 @@ glados-auto-checkin/
 
 <br>
 
-🚀 使用方法
+## 🚀 使用方法
 1. Fork 本仓库
 点击页面右上角的 Fork 按钮，将本项目克隆到你的 GitHub 账号下。
 
@@ -54,7 +52,7 @@ glados-auto-checkin/
 
 <br>
 
-📅 定时说明
+## 📅 定时说明
 默认配置为每天 UTC 02:00 (即北京时间 10:00) 运行。
 
 如果你需要修改运行时间，请编辑 .github/workflows/schedule.yml 文件中的 cron 表达式：
@@ -63,11 +61,11 @@ glados-auto-checkin/
 ```
 <br>
 
-⚠️ 常见问题
+## ⚠️ 常见问题
 - Cookie 过期：如果收到“Cookie Error”通知，请重新提取 Cookie 并更新到 Secrets 中。
 - 签到失败：请检查 Secrets 名字是否拼写正确（必须完全一致）。>
 
 <br>
 
-📜 免责声明
+## 📜 免责声明
 本项目仅供学习交流使用，请勿用于商业用途。脚本运行完全基于 GitHub Actions 免费服务，不保证 100% 的可用性。
