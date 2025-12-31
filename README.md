@@ -16,9 +16,8 @@ glados-auto-checkin/
 ├── requirements.txt        # 📦 依赖列表：告诉环境需要安装 requests 库
 └── README.md               # 📖 说明文档：即你现在看到的这份说明
 ```
-<br>
+<br> ---
 
-<hr>
 
 ✨ 特性
 - 🕒 每日自动签到：每天北京时间 10:00 自动执行。
