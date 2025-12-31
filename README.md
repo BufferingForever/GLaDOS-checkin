@@ -20,7 +20,7 @@ glados-auto-checkin/
 
 <br>
 
-✨ 特性
+## ✨ 特性
 - 🕒 每日自动签到：每天北京时间 10:00 自动执行。
 - 📱 Telegram 通知：签到结果直接推送到手机（可选）。
 - 🛡️ 安全隐私：所有敏感数据（Cookie、Token）存储在 GitHub Secrets 中，不会公开。
