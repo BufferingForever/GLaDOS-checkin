@@ -30,15 +30,15 @@ def checkin():
     if not cookie:
         return "❌ 错误: 未在 Secrets 中配置 GLADOS_COOKIE"
 
-    url = "https://glados.cloud/api/user/checkin"
+    url = "https://railgun.info/api/user/checkin"
     headers = {
         'cookie': cookie,
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
         'content-type': 'application/json;charset=UTF-8',
-        'origin': 'https://glados.cloud',
-        'referer': 'https://glados.cloud/console/checkin'
+        'origin': 'https://railgun.info',
+        'referer': 'https://railgun.info/console/checkin'
     }
-    payload = {'token': 'glados.cloud'} 
+    payload = {'token': 'railgun.info'} 
 
     try:
         print("⏳ 开始签到...")
