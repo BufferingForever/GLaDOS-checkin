@@ -3,7 +3,7 @@ name: GLaDOS Checkin
 on:
   schedule:
     # 每天北京时间上午 10:00 (UTC 02:00)
-    - cron: '0 8 * * *'
+    - cron: '0 7 * * *'
   workflow_dispatch: # 允许手动测试
 
 jobs:
